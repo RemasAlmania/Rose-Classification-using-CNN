@@ -53,6 +53,7 @@ RoseClassification_report.pdf # Project report
 
 ## 👥 Developed by
 This project was developed by :
+- [Remas Almania](https://github.com/RemasAlmania)
 - [Hissah](https://github.com/hessakhs) 
 - [Reem Alsuhaim](https://github.com/Reem-Alsuhaim)
-- [Remas Almania](https://github.com/RemasAlmania)
+
