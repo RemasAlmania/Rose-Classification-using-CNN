@@ -30,7 +30,7 @@ The program:
 
 ---
 
-## 📊 Dataset
+##  Dataset
 We used a subset of the [Flowers Dataset on Kaggle](https://www.kaggle.com/datasets/imsparsh/flowers-dataset).  
 From the original dataset, we selected:
 - 100 images of roses
@@ -51,7 +51,7 @@ RoseClassification_report.pdf # Project report
 
 ---
 
-## 👥 Developed by
+##  Developed by
 This project was developed by :
 - [Remas Almania](https://github.com/RemasAlmania)
 - [Hissah](https://github.com/hessakhs) 
