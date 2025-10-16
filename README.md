@@ -42,12 +42,44 @@ From the original dataset, we selected:
 We also applied data augmentation (rotation, zoom, shifting), which doubled the dataset size.
 
 ---
+## Model Design
+The custom CNN architecture includes:
+- **3 Convolutional Layers** (filters: 16, 32, 64)
+- **ReLU Activation**
+- **2×2 MaxPooling** after each conv layer
+- **Batch Normalization** and **Dropout (0.3)** for stability
+- **L2 Regularization (0.001–0.005)** to prevent overfitting
+- **Dense Layer (128 neurons)**
+- **Output Layer:** Sigmoid (binary classification)
 
-## Project Structure
-```
-RoseClassification.ipynb # Source code (CNN implementation)
-RoseClassification_report.pdf # Project report
-```
+![5D8BB95F-232C-4217-B5C8-5BE0B193BAC2_1_201_a](https://github.com/user-attachments/assets/3e44bfd4-f42b-40dc-a261-ffa950509ed7)
+
+
+---
+
+## Model Development & Training
+
+- Framework: TensorFlow & Keras
+- Learning Rate: 0.0001
+- Batch Size: 32 (training), 64 (validation/testing)
+- Epochs: variable, with EarlyStopping (patience=5)
+- Evaluation Metrics: Accuracy, Precision, Recall, F1-score
+- Hyperparameter tuning for dropout, L2, and threshold adjustment
+
+
+___
+
+## Results
+
+| Model                      | Accuracy | Precision | Recall | F1-Score |
+| -------------------------- | -------- | --------- | ------ | -------- |
+| **Custom CNN**             | 0.95     | 0.97      | 0.93   | 0.95     |
+| **MobileNetV2 (Baseline)** | 0.92     | 0.93      | 0.90   | 0.92     |
+
+
+
+![1F5CAFA8-2866-40A0-B4B4-797464398A34_1_201_a](https://github.com/user-attachments/assets/fcb97653-5578-47df-b721-f200dc6854d2)
+
 
 ---
 
@@ -56,4 +88,13 @@ This project was developed by :
 - [Remas Almania](https://github.com/RemasAlmania)
 - [Hissah](https://github.com/hessakhs) 
 - [Reem Alsuhaim](https://github.com/Reem-Alsuhaim)
+
+--- 
+## References 
+
+1. Peryanto, A., Yudhana, A., & Umar, R. (2022). Convolutional neural network and support vector machine in classification of flower images. *Khazanah Informatika*.
+2. Gurnani, A. et al. (2017). Flower Categorization using Deep Convolutional Neural Networks. *arXiv preprint*.
+3. Alipour, N. et al. (2021). Flower Image Classification Using Deep Convolutional Neural Network. *IEEE ICWR*.
+4. Howard, A. et al. (2017). Efficient Convolutional Neural Networks for Mobile Vision Applications. *arXiv preprint*.
+
 
